@@ -4,11 +4,11 @@ RUN apt-get update && apt-get install -y ansible
 
  
 
-RUN rm /etc/ansible/ansible.cfg
-COPY ansible.cfg /etc/ansible/ansible.cfg
-RUN rm /etc/ansible/hosts
-RUN rmdir /etc/ansible/roles
-RUN mkdir /etc/ansible/hosts
+#RUN rm /etc/ansible/ansible.cfg
+#COPY ansible.cfg /etc/ansible/ansible.cfg
+#RUN rm /etc/ansible/hosts
+#RUN rmdir /etc/ansible/roles
+#RUN mkdir /etc/ansible/hosts
 #COPY step /etc/ansible/hosts/step
 
  
