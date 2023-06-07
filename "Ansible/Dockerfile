@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
-ENV DEBIAN_FRONTEND=noninteractive
-ENV TZ=Europe
+#ENV DEBIAN_FRONTEND=noninteractive
+#ENV TZ=Europe
 
 RUN apt-get update && apt-get install -y software-properties-common
 RUN apt-add-repository -y ppa:ansible/ansible
