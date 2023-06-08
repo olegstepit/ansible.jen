@@ -15,7 +15,7 @@ pipeline  {
         stage("Git clone") {
             steps {
                 sh '''
-                cd /home/an1/
+                cd /home/an2/
                 git clone https://github.com/olegstepit/ansible.jen.git   
                 '''
             }
@@ -23,8 +23,8 @@ pipeline  {
         stage("Build") {
             steps {
                 sh '''
-                cd /home/an1/ansible.jen/Ansible
-                docker build -t oleg222/ansible1 .
+                cd /home/an2/ansible.jen/Ansible
+                docker build -t oleg222/ansible2 .
                 '''
             }
         } 
@@ -32,8 +32,8 @@ pipeline  {
             steps {
                 sh '''
                 docker run \
-                --name ansible1 \
-                -d oleg222/ansible1
+                --name ansible2 \
+                -d oleg222/ansible2
                 '''
             }
         }
@@ -51,7 +51,7 @@ pipeline  {
             steps {
                 echo " ============== pushing image =================="
                 sh '''
-                docker push oleg222/ansible1
+                docker push oleg222/ansible2
                 '''
             }
         }
