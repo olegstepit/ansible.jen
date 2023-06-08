@@ -16,14 +16,14 @@ pipeline  {
             steps {
                 sh '''
                 cd /home/an/
-                git clone https://github.com/Makson8286/ansible.jen      
+                git clone https://github.com/olegstepit/ansible.jen      
                 '''
             }
         }    
         stage("Build") {
             steps {
                 sh '''
-                cd /home/an/ansible.jen/Ansible
+                cd /home/an1/ansible.jen/Ansible
                 docker build -t oleg222/ansible .
                 '''
             }
