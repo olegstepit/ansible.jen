@@ -24,7 +24,7 @@ pipeline  {
             steps {
                 sh '''
                 cd /home/an1/ansible.jen/Ansible
-                docker build -t oleg222/ansible .
+                docker build -t oleg222/ansible1 .
                 '''
             }
         } 
@@ -32,8 +32,8 @@ pipeline  {
             steps {
                 sh '''
                 docker run \
-                --name ansible \
-                -d oleg222/ansible
+                --name ansible1 \
+                -d oleg222/ansible1
                 '''
             }
         }
@@ -51,7 +51,7 @@ pipeline  {
             steps {
                 echo " ============== pushing image =================="
                 sh '''
-                docker push oleg222/ansible
+                docker push oleg222/ansible1
                 '''
             }
         }
